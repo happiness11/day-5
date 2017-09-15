@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Flexbox</title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+		body{
+			background-color:#F5D76E;
+		}
+		nav{
+			font-family: roboto;
+			/*background-color: #eee;*/
+			margin: 30px auto;
+			width: 100%;
+			height: 500px;
+			display: flex;
+			flex-direction:column;
+			align-items:stretch;
+			border-radius: 20px;
+			padding: 0;	
+			/*font-size:1em;*/
+		}
+				
+		a{
+			text-decoration: none;
+			color: black;
+			flex:1;
+			height: 30px;
+			font-family: Dosis;
+			padding:20px 20px 20px 20px;
+			text-align: center;
+			font-size: 2em;
+			/*border:1px solid white;*/
+
+		}
+			#logoNav{
+			font-size: 2em;
+			font-weight: bold;
+			}
+
+           #landing{
+			display: flex; /*set as a flex container*/
+			flex-direction:column; /*mobile first approach*/
+			justify-content:center;/* for the crox axis alignment*/
+			align-items:center; /* for the main axis alignment*/
+		}
+
+           #landing-graphic{
+
+           }
+
+		#landing-message{
+			text-align: center;
+			font-family: Dosis;
+			font-size: 30px;
+			margin:50px 20px;
+		}
+          
+           	.cards{
+                  display: flex;
+                  flex-direction:column;
+                  justify-content:space-around;
+                  
+                  
+                  /*text-align: justify;*/
+                  
+                 
+                  }
+             .card{
+                 width: 100%;
+                 margin:10px;
+                  /*height:200px;*/
+                 background-color:gray;
+                 padding:10px;
+              }
+            
+             .card img{
+             	width: 100%;
+               /*padding:20px;*/
+              }
+                
+             .card p{
+             font-family: dosis;
+             font-size: 22px;
+             }
+             
+             
+		@media screen and (min-width: 700px)
+		{
+			nav{
+			flex:1;
+			flex-direction:row;
+			border: 1px 0 0;
+			font-size:1em;
+			height:200px;
+			}
+			
+			a{
+             flex-direction:row-reverse;
+            justify-content:flex-end;
+            margin-top:20px;
+            padding:0;
+			}
+			
+			#logoNav{
+
+			}
+			
+
+			.cards{
+				display:flex;
+				flex-wrap:nowrap;/* sets cards to appear side by side for desktop*/
+				flex-direction:row;/*sets flex direction*/
+			}
+                  
+             .card{
+             	display:flex;
+             	width: 400px;
+                 /*height:200px;*/
+                 display: flex;
+                 padding:20px;
+                 flex-direction:column;
+                 text-align:center;
+                 
+              }
+            
+             .card img
+             {
+              width:400px;
+              height:200px;
+               }
+             .card p
+             {
+             font-family: dosis;
+             font-size: 22px;
+             padding:20px;
+             justify-content:center;
+             }
+
+			#landing{
+				flex-direction:row;/* across screen for dexktop screen size*/
+				width:80%;
+				margin: 100px auto;
+			}
+			
+		}
+
+		</style>
+</head>
+<body>
+
+	<nav>
+		
+			<a id="logoNav">CODE INSTITUTE</a>
+			<a href="#">Home</a>
+			<a href="#">Projects</a>
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+			<a href="#">Photos</a>
+		
+
+	</nav>
+	
+  		<div id="landing">
+			<div id="landing-message">
+				<h1>Make Creative Clever Fun Apps. Simple.</h1>
+			</div>
+			<div id="landing-graphic">
+				<img id="landing-image" src="laptop.png" alt="laptop" width="400">
+			</div>
+		</div>
+ 
+    
+   <section class="cards">
+        <div class="card">
+                <img src="graphic1.png"/>
+                <h2>Remote Learning</h2>
+                <p>Join Code Institute</p>
+                
+            
+        </div> 
+        
+        
+        <div class="card">
+                <img src="graphic2.png"/>
+                <h2>BootCamp</h2>
+                <p>You are Welcome!</p>
+               
+        </div> 
+      
+        
+        <div class="card">
+                <img src="graphic3.png"/>
+                <h2>Online Mentoring</h2>
+                <p>Join Us</p>
+                
+        </div> 
+</section>
+        
+        
+        
+        
+        
+        
+        
+        
+</section>
+   
+</body>
+</html>
